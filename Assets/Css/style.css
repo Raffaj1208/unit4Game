@@ -1,0 +1,95 @@
+body {
+    background-image: url(../Images/double-bubble-dark.png);
+}
+
+header{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder; font-size: xxx-large;
+    background-color: lightgray; color: darkred;
+    height: max-content; width: max-content;
+    text-align: center;
+    margin-left: auto; margin-right: auto;
+}
+main{
+    height: max-content; width: max-content;
+    margin-left: auto; margin-right: auto;
+}
+
+#des {
+    margin-top: 5px; margin-left: auto; margin-right: auto;
+    height: fit-content; width: fit-content;
+    background-color: white ; color: black;
+    font-family: Arial, Helvetica, sans-serif; font-weight: bold;
+    font-size: large;
+    text-align: center;
+}
+p {
+    height: max-content; width: max-content;
+    margin-right: auto; margin-left: auto;
+    text-align: center;
+    }
+
+#number {
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bolder; font-size: xxx-large;
+    height: max-content; width: max-content;
+    background-color: darkslategray; color: white;
+    margin-right: auto; margin-left: auto;
+}
+
+#score {
+ height: fit-content; width: fit-content;
+ font-size: large; font-family: Arial, Helvetica, sans-serif;
+ font-weight: bolder;
+ background-color: blanchedalmond; color: black;
+ margin-left: auto; margin-right: auto;
+}
+
+#smHeader {
+    height: fit-content; width: fit-content;
+    background-color: blanchedalmond; color: black;
+    font-size: xx-large; font-weight: bold; font-family: Arial, Helvetica, sans-serif;
+    margin-right: auto; margin-left: auto;
+}
+
+#usrNumber {
+    height: fit-content; width: 150px;
+    background-color: darkslategray; color: white;
+    font-size: xxx-large; font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    margin-left: auto; margin-right: auto;
+}
+.box {
+    margin-right: auto; margin-left: auto;
+    height: max-content; width: max-content;
+}
+@media screen (max-width:640px) {
+    main {
+        height: min-content; width: min-content;
+    }
+
+    #p{
+        height: fit-content; width: min-content;
+    }
+
+    #des {
+        height: fit-content; width: min-content;
+    }
+}
+
+@media screen (max-width:960px) {
+
+}
+@media screen (max-width:350px) {
+    main {
+        height: min-content; width: min-content;
+    }
+
+    #p{
+        height: fit-content; width: min-content;
+    }
+
+    #des {
+        height: fit-content; width: min-content;
+    }
+}

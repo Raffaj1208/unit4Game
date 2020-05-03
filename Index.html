@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/Css/style.css ">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>Crystal Collector Game!!</header>
+    <main>
+        <section id="des">
+            <p>At the begining of each game you will be given a random number.</p>
+            <p>There are 4 crystals, each worth 5 points.</p> 
+            <p>When you click on a crystal, it's number value will be apointed to you.</p>
+            <p>The goal is to end up with the same number of points as the computer.</p>
+             <p>If you go over, it's Game Over.</p>
+             <p>Start by clicking on one of the crystals to add points to your scorecard, Have fun!</p>
+    </section>
+    
+    <section id="number"></section>
+    <aside id="score"><span id="Wins">Wins:</span> <br> <span id="Losses">Losses:</span></aside>
+    <div class="box">    
+    <button class="btns" data-btnId="btn-1"><img id="btn-1" src="Assets/Images/blueImage.png" alt="blue crystal"></button> 
+    <button class="btns" data-btnId="btn-2"><img id="btn-2" src="Assets/Images/redImage.png" alt="red crystal"></button>
+    <button class="btns" data-btnId="btn-3"><img id="btn-3" src="Assets/Images/yellowIMage.png" alt="yellow crystal"></button>
+    <button class="btns" data-btnId="btn-4"><img id="btn-4" src="Assets/Images/blueImage2.png" alt="oval crystal"></button>
+    </div>
+    <br><div class="box"><span id="smHeader">Your Total Score:</span></div><br>
+    
+    <div class="box"><span id="usrNumber"></span></div>
+    
+    <script src="Assets/JavaScript/Game.js"></script>
+    
+</main>
+</body>
+</html>
