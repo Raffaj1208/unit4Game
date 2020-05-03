@@ -63,33 +63,3 @@ p {
     margin-right: auto; margin-left: auto;
     height: max-content; width: max-content;
 }
-@media screen (max-width:640px) {
-    main {
-        height: min-content; width: min-content;
-    }
-
-    #p{
-        height: fit-content; width: min-content;
-    }
-
-    #des {
-        height: fit-content; width: min-content;
-    }
-}
-
-@media screen (max-width:960px) {
-
-}
-@media screen (max-width:350px) {
-    main {
-        height: min-content; width: min-content;
-    }
-
-    #p{
-        height: fit-content; width: min-content;
-    }
-
-    #des {
-        height: fit-content; width: min-content;
-    }
-}
