@@ -63,3 +63,36 @@ p {
     margin-right: auto; margin-left: auto;
     height: max-content; width: max-content;
 }
+
+@media screen (max-width:980px;){
+    
+}
+
+@media screen (max-width:640px;){
+    main {
+        height: min-content; width: min-content;
+    }
+
+    p{
+        height: min-content; width: min-content;
+        font-size: medium; line-height: 1.0;
+    }
+
+    #des {
+        height: min-content; width: min-content;
+    }
+}
+
+@media screen (max-width:350px;){
+    main{
+        height: min-content; width: min-content;
+    }
+
+    p{
+        height: min-content; width: min-content;
+    }
+
+    #des{
+        height: min-content; width: min-content;
+    }
+}
