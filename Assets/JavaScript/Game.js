@@ -35,10 +35,12 @@
    }
 
    //.. Create the loop for the value of the buttons
-   for (let i = 0; i < buttonValues.length; i++) {
-    let buttonLoop = $("data-btnId", buttonValues[i]);
-    console.log(buttonLoop);
-}
+ // buttons
+ const buttons = $(".btns");
+ //.. Create the loop for the value of the buttons
+ for (let i = 0; i < buttonValues.length; i++) {
+   $(buttons[i]).attr("data-btnvalue", buttonValues[i]);
+ }
 
 //.. Create button functions
     $(".btns").on("click", function() {
@@ -46,6 +48,8 @@
      let buttonVal = $(this).attr("data-btnId");
     buttonVal = parseInt(buttonValues);
     usrNumber += buttonVal;
+    console.log("Button Val", buttonVal);
+    console.log("user number", usrNumber);
     $("#usrNumber").text(usrNumber);
 
         
