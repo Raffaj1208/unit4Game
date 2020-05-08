@@ -34,27 +34,25 @@
     $("#number").text(compScore);
    }
 
-   //.. Create the loop for the value of the buttons
- // buttons
- const buttons = $(".btns");
  //.. Create the loop for the value of the buttons
  for (let i = 0; i < buttonValues.length; i++) {
-   $(buttons[i]).attr("data-btnvalue", buttonValues[i]);
+    let buttons = $(".btns");
+    buttons.addClass("btns");
+    buttons.attr("data-btnvalue", buttonValues[i]);
+    $(".btns").append(buttons);
  }
 
 //.. Create button functions
-    $(buttons).on("click", function() {
-    
-     let buttonVal = $(this).attr("data-btnId");
-    buttonVal = parseInt(buttonValues);
+    $(".btns").on("click", function() {
+
+     let buttonVal = ($(this).attr("data-btnvalue"));
+    buttonVal = parseInt(buttonVal);
     usrNumber += buttonVal;
     console.log("Button Val", buttonVal);
     console.log("user number", usrNumber);
     $("#usrNumber").text(usrNumber);
 
-        
-
-    //.. The algorithm
+     //.. The algorithm
     if (usrNumber === compScore) {
         alert("YOU WIINN!!");
         updateWins();
