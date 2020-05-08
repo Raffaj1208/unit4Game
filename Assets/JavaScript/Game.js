@@ -43,7 +43,7 @@
  }
 
 //.. Create button functions
-    $(".btns").on("click", function() {
+    $(buttons).on("click", function() {
     
      let buttonVal = $(this).attr("data-btnId");
     buttonVal = parseInt(buttonValues);

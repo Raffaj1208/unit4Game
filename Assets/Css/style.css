@@ -1,11 +1,11 @@
 body {
-    background-image: url(../Images/double-bubble-dark.png);
+    background-image: url(../Images/7fe3c42e7064e3a3d494ce8deb777341.jpg);
 }
 
 header{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bolder; font-size: xxx-large;
-    background-color: lightgray; color: darkred;
+    background-color: lightgray; color: navy;
     height: max-content; width: max-content;
     text-align: center;
     margin-left: auto; margin-right: auto;
@@ -33,7 +33,7 @@ p {
    font-family: Arial, Helvetica, sans-serif;
    font-weight: bolder; font-size: xxx-large;
     height: max-content; width: max-content;
-    background-color: darkslategray; color: white;
+    background-color: navy; color: white;
     margin-right: auto; margin-left: auto;
 }
 
@@ -54,7 +54,7 @@ p {
 
 #usrNumber {
     height: fit-content; width: 150px;
-    background-color: darkslategray; color: white;
+    background-color: navy; color: white;
     font-size: xxx-large; font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
     margin-left: auto; margin-right: auto;
