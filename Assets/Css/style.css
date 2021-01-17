@@ -1,12 +1,15 @@
 body {
-    background-image: url(../Images/7fe3c42e7064e3a3d494ce8deb777341.jpg);
+    background-image: url('../Images/cave3.jpg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bolder; font-size: xxx-large;
+    font-weight: bolder; font-size: 75px;
    color: navy;
-    height: max-content; width: max-content;
+    height: fit-content; width: fit-content;
     text-align: center;
     margin-left: auto; margin-right: auto;
 }
@@ -18,9 +21,11 @@ main{
 #des {
     margin-top: 5px; margin-left: auto; margin-right: auto;
     height: fit-content; width: fit-content;
+    background-blend-mode:color-burn;
     color: black;
     font-family: Arial, Helvetica, sans-serif; font-weight: bold;
     font-size: large;
+    font-weight: bolder;
     text-align: center;
 }
 p {
@@ -42,6 +47,7 @@ p {
  font-size: large; font-family: Arial, Helvetica, sans-serif;
  font-weight: bolder;
  color: black;
+ background-blend-mode: hard-light;
  margin-left: auto; margin-right: auto;
 }
 
@@ -62,6 +68,10 @@ p {
 .box {
     margin-right: auto; margin-left: auto;
     height: max-content; width: max-content;
+    border-radius: 50px;
+}
+.btns {
+    border-radius: 50px;
 }
 
 @media screen (max-width:980px;){
