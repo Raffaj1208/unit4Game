@@ -1,12 +1,7 @@
-var compScore = Math.floor(Math.random() * 100 + 5);
 var usrNumber = 0;
 var wins = 0;
 var losses = 0;
-var value1 = Math.floor(Math.random() * 100 + 5);
-var value2 = Math.floor(Math.random() * 100 + 5);
-var value3 = Math.floor(Math.random() * 100 + 5);
-var value4 = Math.floor(Math.random() * 100 + 5);
-var buttonValues = [value1, value2, value3, value4];
+var compScore = Math.floor(Math.random() * 100 + 5);
 
 function start() {
     $("#Wins").append(wins);
@@ -43,11 +38,10 @@ function update() {
     updateCompScore();
 };
 
-
 function matchRules() {
     if (usrNumber === compScore) {
         alert("YOU WIINN!!");
-       update();
+        update();
     }
     
     if (usrNumber > compScore) {
