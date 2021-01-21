@@ -1,58 +1,52 @@
-//.. Create variables
-   let compScore = Math.floor(Math.random() * 100 + 5); console.log(compScore)
-   let usrNumber = 0; console.log(usrNumber)
-   let wins = 0; console.log(wins)
-   let losses = 0; console.log(losses)
-   let buttonValues = ["5", "10", "1", "2"]; console.log(buttonValues)
+//let compScore = Math.floor(Math.random() * 100 + 5);
+let usrNumber = 0; console.log(usrNumber)
+let buttonValues = ["5", "10", "1", "2"]; console.log(buttonValues);
+let wins = 0; console.log(wins);
+let losses = 0; console.log(losses);
 
-   //.. Tell the html file what it will be displaying
-   //.. Grab each element, and tell it to display the value of the variable
-   $("#number").append(compScore);
-   $("#Wins").append(wins);
-   $("#Losses").append(losses);
-   $("#usrNumber").append(usrNumber);
+console.log(compScore);
+$("#Wins").append(wins);
+$("#number").append(compScore);
+$("#Losses").append(losses);
+$("#usrNumber").append(usrNumber);
 
-   //.. Create our functions for later
-   let updateWins = function() {
-       wins++;
-       $("#Wins").text("Wins:" + wins);
+   
+let updateWins = function() {
+wins++;
+$("#Wins").text("Wins:" + wins);
+};
 
-   };
+let resetUsrNumber = function() {
+usrNumber = 0;
+$("#usrNumber").text(usrNumber);
+};
 
-   let resetUsrNumber = function() {
-       usrNumber = 0;
-       $("#usrNumber").text(usrNumber);
-   }
+let updateLosses = function() {
+losses++;
+$("#Losses").text("Losses:" + losses);
+};
 
-   let updateLosses = function() {
-       losses++;
-       $("#Losses").text("Losses:" + losses);
-   }
 
-   let updateCompScore = function() {
-    compScore = Math.floor(Math.random() * 100 + 5);
-    $("#number").text(compScore);
-   }
+let updateCompScore = function() {
+compScore = Math.floor(Math.random() * 100 + 5);
+//$("#number").text(compScore);
+};
 
- //.. Create the loop for the value of the buttons
  for (let i = 0; i < buttonValues.length; i++) {
-    let buttons = $(".btns");
-    buttons.addClass("btns");
-    buttons.attr("data-btnvalue", buttonValues[i]);
-    $(".btns").append(buttons);
- }
+     let buttons = $(".btns");
+     buttons.addClass("btns");
+     buttons.attr("data-btnvalue", buttonValues[i]);
+     $(".btns").append(buttons);
+    };
 
-//.. Create button functions
-    $(".btns").on("click", function() {
-
-     let buttonVal = ($(this).attr("data-btnvalue"));
+$(".btns").on("click", function() {
+    let buttonVal = ($(this).attr("data-btnvalue"));
     buttonVal = parseInt(buttonVal);
     usrNumber += buttonVal;
     console.log("Button Val", buttonVal);
     console.log("user number", usrNumber);
     $("#usrNumber").text(usrNumber);
 
-     //.. The algorithm
     if (usrNumber === compScore) {
         alert("YOU WIINN!!");
         updateWins();
@@ -66,9 +60,4 @@
         resetUsrNumber();
         updateCompScore();
     }
-    
-    
 });
-
-
-$('#des').attr()

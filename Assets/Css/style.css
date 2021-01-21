@@ -34,7 +34,7 @@ p {
     text-align: center;
     }
 
-#number {
+#toGuess {
    font-family: Arial, Helvetica, sans-serif;
    font-weight: bolder; font-size: xxx-large;
     height: max-content; width: max-content;
@@ -72,6 +72,9 @@ p {
 }
 .btns {
     border-radius: 50px;
+}
+#sack {
+    height: 200px; width: 200px;
 }
 
 @media screen (max-width:980px;){
