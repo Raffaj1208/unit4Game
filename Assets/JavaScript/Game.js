@@ -1,63 +1,57 @@
-//let compScore = Math.floor(Math.random() * 100 + 5);
-let usrNumber = 0; console.log(usrNumber)
-let buttonValues = ["5", "10", "1", "2"]; console.log(buttonValues);
-let wins = 0; console.log(wins);
-let losses = 0; console.log(losses);
+var compScore = Math.floor(Math.random() * 100 + 5);
+var usrNumber = 0;
+var wins = 0;
+var losses = 0;
+var value1 = Math.floor(Math.random() * 100 + 5);
+var value2 = Math.floor(Math.random() * 100 + 5);
+var value3 = Math.floor(Math.random() * 100 + 5);
+var value4 = Math.floor(Math.random() * 100 + 5);
+var buttonValues = [value1, value2, value3, value4];
 
-console.log(compScore);
-$("#Wins").append(wins);
-$("#number").append(compScore);
-$("#Losses").append(losses);
-$("#usrNumber").append(usrNumber);
-
-   
-let updateWins = function() {
-wins++;
-$("#Wins").text("Wins:" + wins);
+function start() {
+    $("#Wins").append(wins);
+    $("#number").append(compScore);
+    $("#Losses").append(losses);
+    $("#usrNumber").append(usrNumber);
+    $("#number").hide(compScore);
+    console.log(compScore);
 };
+start();
 
-let resetUsrNumber = function() {
-usrNumber = 0;
-$("#usrNumber").text(usrNumber);
-};
-
-let updateLosses = function() {
-losses++;
-$("#Losses").text("Losses:" + losses);
-};
-
-
-let updateCompScore = function() {
-compScore = Math.floor(Math.random() * 100 + 5);
-//$("#number").text(compScore);
-};
-
- for (let i = 0; i < buttonValues.length; i++) {
-     let buttons = $(".btns");
-     buttons.addClass("btns");
-     buttons.attr("data-btnvalue", buttonValues[i]);
-     $(".btns").append(buttons);
+function update() {
+    var updateWins = function() {
+        wins++;
+        $("#Wins").text("Wins:" + wins);
     };
+    updateWins();
 
-$(".btns").on("click", function() {
-    let buttonVal = ($(this).attr("data-btnvalue"));
-    buttonVal = parseInt(buttonVal);
-    usrNumber += buttonVal;
-    console.log("Button Val", buttonVal);
-    console.log("user number", usrNumber);
-    $("#usrNumber").text(usrNumber);
+    var resetUsrNumber = function() {
+        $("#usrNumber").text(usrNumber);
+        usrNumber = 0;
+    };
+    resetUsrNumber();
+    
+    var updateLosses = function() {
+        losses++;
+        $("#Losses").text("Losses:" + losses);
+    };
+    updateLosses();
+    
+    var updateCompScore = function() {
+        compScore = Math.floor(Math.random() * 100 + 5);
+    };
+    updateCompScore();
+};
 
+
+function matchRules() {
     if (usrNumber === compScore) {
         alert("YOU WIINN!!");
-        updateWins();
-        resetUsrNumber();
-        updateCompScore();
+       update();
     }
     
     if (usrNumber > compScore) {
         alert("YOU LOOSE!!!");
-        updateLosses();
-        resetUsrNumber();
-        updateCompScore();
+        update();
     }
-});
+};

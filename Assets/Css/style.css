@@ -96,16 +96,16 @@ p {
     }
 }
 
-@media screen (max-width:350px;){
-    main{
+@media screen (max-width:350px;) {
+    main {
         height: min-content; width: min-content;
     }
 
-    p{
+    p {
         height: min-content; width: min-content;
     }
 
-    #des{
+    #des {
         height: min-content; width: min-content;
     }
 }
