@@ -19,28 +19,33 @@ start();
 
 function update() {
     var updateWins = function() {
-        wins++;
+        if (usrNumber === compScore) {
+            wins++;
+        }
         $("#Wins").text("Wins:" + wins);
     };
     updateWins();
 
     var resetUsrNumber = function() {
-        $("#usrNumber").text(usrNumber);
         usrNumber = 0;
+        $("#usrNumber").text(usrNumber);
     };
     resetUsrNumber();
     
     var updateLosses = function() {
-        losses++;
+        if (usrNumber !== compScore) {
+            losses++;
+        }
         $("#Losses").text("Losses:" + losses);
     };
     updateLosses();
-    
+
     var updateCompScore = function() {
         compScore = Math.floor(Math.random() * 100 + 5);
     };
     updateCompScore();
-};
+
+}
 
 function matchRules() {
     if (usrNumber === compScore) {
@@ -52,8 +57,14 @@ function matchRules() {
         alert("YOU LOOSE!!!");
         update();
     }
+
+    $('#giveIn').on('click', function() {
+        if (usrNumber > compScore || usrNumber < compScore) {
+            alert("YOU LOOSE!!!");
+           update();
+        }
+    });
 };
-matchRules();
 
 $('#btn1').on('click', function() {
     usrNumber += value1;
