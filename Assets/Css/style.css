@@ -14,7 +14,7 @@ header{
     margin-left: auto; margin-right: auto;
 }
 main{
-    height: max-content; width: max-content;
+    height: fit-content; width: fit-content;
     margin-left: auto; margin-right: auto;
 }
 
@@ -28,11 +28,14 @@ main{
     font-weight: bolder;
     text-align: center;
 }
-p {
-    height: max-content; width: max-content;
-    margin-right: auto; margin-left: auto;
+button {
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    margin-left: auto; margin-right: auto;
     text-align: center;
-    }
+}
 
 #toGuess {
    font-family: Arial, Helvetica, sans-serif;
@@ -95,13 +98,8 @@ p {
 
 @media screen (max-width:350px;) {
     main {
-        height: min-content; width: min-content;
+        height: fit-content; width: fit-content;
     }
-
-    p {
-        height: min-content; width: min-content;
-    }
-
     #des {
         height: min-content; width: min-content;
     }

@@ -42,6 +42,27 @@ function update() {
     updateCompScore();
 };
 
+
+$('#btn1').on('click', function() {
+    usrNumber += value1;
+    $('#usrNumber').text(usrNumber);
+});
+
+$('#btn2').on('click', function() {
+    usrNumber += value2;
+    $('#usrNumber').text(usrNumber);
+});
+
+$('#btn3').on('click', function() {
+    usrNumber += value3;
+    $('#usrNumber').text(usrNumber);
+});
+
+$('#btn4').on('click', function() {
+    usrNumber += value4;
+    $('#usrNumber').text(usrNumber);
+});
+
 function matchRules() {
     if (usrNumber === compScore) {
         alert("YOU WIINN!!");
@@ -54,27 +75,3 @@ function matchRules() {
     }
 };
 matchRules();
-
-$('#btn1').on('click', function() {
-    usrNumber += value1;
-    $('#usrNumber').text(usrNumber);
-    console.log(value1);
-});
-
-$('#btn2').on('click', function() {
-    usrNumber += value2;
-    $('#usrNumber').text(usrNumber);
-    console.log(value2);
-});
-
-$('#btn3').on('click', function() {
-    usrNumber += value3;
-    $('#usrNumber').text(usrNumber);
-    console.log(value3);
-});
-
-$('#btn4').on('click', function() {
-    usrNumber += value4;
-    $('#usrNumber').text(usrNumber);
-    console.log(value4);
-});
