@@ -42,6 +42,7 @@ function update() {
 
     var updateCompScore = function() {
         compScore = Math.floor(Math.random() * 100 + 5);
+        console.log(compScore);
     };
     updateCompScore();
 };
@@ -51,19 +52,22 @@ function matchRules() {
         alert("You Win!! You get to keep all the crystals in the bag !!");
         update();
     }
-    
     if (usrNumber > compScore) {
         alert("You Lost! you don't get to keep any crystals ");
         update();
     }
-
-    $('#giveIn').on('click', function() {
-        if (usrNumber > compScore || usrNumber < compScore) {
-            alert("You Lost! you don't get to keep any crystals ");
-            update();
-        }
-    });
 };
+
+$('#fold').on('click', function() {
+    if (usrNumber >= compScore - 5 || usrNumber === compScore) {
+        alert("You Win!! You get to keep all the crystals in the bag !!");
+        update();
+    }
+    if (usrNumber < (compScore - 5)) {
+        alert("You Lost! you don't get to keep any crystals ");
+        update();
+    }
+});
 
 $('#btn1').on('click', function() {
     usrNumber += value1;
