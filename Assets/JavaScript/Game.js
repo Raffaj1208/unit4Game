@@ -44,24 +44,23 @@ function update() {
         compScore = Math.floor(Math.random() * 100 + 5);
     };
     updateCompScore();
-
-}
+};
 
 function matchRules() {
     if (usrNumber === compScore) {
-        alert("YOU WIINN!!");
+        alert("You Win!! You get to keep all the crystals in the bag !!");
         update();
     }
     
     if (usrNumber > compScore) {
-        alert("YOU LOOSE!!!");
+        alert("You Lost! you don't get to keep any crystals ");
         update();
     }
 
     $('#giveIn').on('click', function() {
         if (usrNumber > compScore || usrNumber < compScore) {
-            alert("YOU LOOSE!!!");
-           update();
+            alert("You Lost! you don't get to keep any crystals ");
+            update();
         }
     });
 };
