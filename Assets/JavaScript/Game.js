@@ -1,11 +1,11 @@
 var usrNumber = 0;
 var wins = 0;
 var losses = 0;
-var compScore = Math.floor(Math.random() * 500 + 5);
-var value1 = Math.floor(Math.random() * 100 + 5);
-var value2 = Math.floor(Math.random() * 100 + 5);
-var value3 = Math.floor(Math.random() * 100 + 5);
-var value4 = Math.floor(Math.random() * 100 + 5);
+var compScore = Math.floor(Math.random() * 150 + 5);
+var value1 = Math.floor(Math.random() * 10 + 5);
+var value2 = Math.floor(Math.random() * 10 + 5);
+var value3 = Math.floor(Math.random() * 10 + 5);
+var value4 = Math.floor(Math.random() * 10 + 5);
 
 function start() {
     $("#Wins").append(wins);
