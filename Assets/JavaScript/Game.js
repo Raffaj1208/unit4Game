@@ -59,15 +59,16 @@ function matchRules() {
 };
 
 $('#fold').on('click', function() {
-    if (usrNumber >= compScore - 5 || usrNumber === compScore) {
+    if (usrNumber >= compScore - 5 && usrNumber <= compScore) {
         alert("You Win!! You get to keep all the crystals in the bag !!");
         update();
     }
-    if (usrNumber < (compScore - 5)) {
+     else if (usrNumber < acceptable) {
         alert("You Lost! you don't get to keep any crystals ");
         update();
     }
 });
+
 
 $('#btn1').on('click', function() {
     usrNumber += value1;
